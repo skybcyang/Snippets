@@ -2,7 +2,7 @@
 // Created by skybcyang on 2021/8/30.
 //
 
-#include "BubbleSort.h"
+#include "bubble_sort/BubbleSort.h"
 #include <iostream>
 #include <catch2/catch_test_macros.hpp>
 
