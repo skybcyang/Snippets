@@ -8,6 +8,7 @@
 #include "../base.h"
 #include <iostream>
 #include <vector>
+#include <random>
 
 template<typename T, int row, int col>
 void dfs(T(&map)[row][col], bool(&used)[row][col], Position& cur, Position& aim, std::vector<Position>& que, std::vector<Position>& result) {
@@ -18,6 +19,7 @@ void dfs(T(&map)[row][col], bool(&used)[row][col], Position& cur, Position& aim,
         return;
     }
     std::vector<std::pair<int, int>> directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+    std::shuffle(directions.begin(), directions.end(), std::mt19937(std::random_device()()));
     for (auto& direction: directions) {
         Position newPos{cur.x + direction.first, cur.y + direction.second};
         if (newPos.x < 0 || newPos.x >= row || newPos.y < 0 || newPos.y >= col) continue;
