@@ -9,7 +9,8 @@
 #include <vector>
 #include <random>
 
-void MonkeySort(std::vector<int>& arr) {
+template<typename T>
+void MonkeySort(std::vector<T>& arr) {
     while(!std::is_sorted(arr.begin(), arr.end(), std::less<>())) {
         std::shuffle(arr.begin(), arr.end(), std::mt19937(std::random_device()()));
     }

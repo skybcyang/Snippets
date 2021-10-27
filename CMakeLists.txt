@@ -18,12 +18,11 @@ add_executable(Snippets
         sort/test_sort.cpp
         sort/strange_sort/MonkeySort.h
         sort/strange_sort/SleepSort.h
-        sort/strange_sort/test_strange_sort.cpp
         find_way/bfs/bfs.h
         find_way/dfs/test_dfs.cpp
         find_way/dfs/dfs.h
         find_way/base.h
         find_way/bfs/test_bfs.cpp
-        others/timer/timer.cpp others/para_binding/test_para_binding.cpp find_way/astar/astar.h find_way/astar/test_astar.cpp)
+        others/timer/timer.cpp others/para_binding/test_para_binding.cpp find_way/astar/astar.h find_way/astar/test_astar.cpp sort/merge_sort/MergeSort.h)
 
 target_link_libraries(Snippets PRIVATE Catch2::Catch2WithMain)

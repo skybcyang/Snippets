@@ -8,9 +8,12 @@
 #include <vector>
 #include <iterator>
 
-void BubbleSort(std::vector<int>::iterator start, std::vector<int>::iterator end) {
-    for (auto x_iter = start; x_iter+1 < end; x_iter++) {
-        for (auto y_iter = x_iter+1; y_iter < end; y_iter++) {
+template<typename T>
+void BubbleSort(std::vector<T>& input) {
+    auto startIter = input.begin();
+    auto endIter = input.end();
+    for (auto x_iter = startIter; x_iter+1 < endIter; x_iter++) {
+        for (auto y_iter = x_iter+1; y_iter < endIter; y_iter++) {
             if (*x_iter > *y_iter){
                 std::swap(*x_iter, *y_iter);
             }
