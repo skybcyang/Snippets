@@ -26,7 +26,7 @@ void SleepSort(std::vector<T>& arr) {
     std::vector<std::thread> threads;
     threads.reserve(arr.size());
     for (auto x : arr) {
-        threads.emplace_back(std::move(std::thread(SleepThread, x, std::ref(res), std::ref(m))));
+        threads.emplace_back(std::move(std::thread(SleepThread<T>, x, std::ref(res), std::ref(m))));
     }
     for (auto& t: threads) {
         t.join();
