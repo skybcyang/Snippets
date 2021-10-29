@@ -8,30 +8,22 @@
 template<typename T>
 void Merge(std::vector<T>& input, size_t left, size_t mid, size_t right) {
     std::vector<T> tmp;
-    int pos1 = left, pos2 = mid + 1;
+    size_t pos1 = left, pos2 = mid + 1;
     while (pos1 <= mid && pos2 <= right) {
         if (input[pos1] < input[pos2]) {
-            tmp.push_back(input[pos1]);
-            pos1++;
+            tmp.push_back(input[pos1++]);
         } else {
-            tmp.push_back(input[pos2]);
-            pos2++;
+            tmp.push_back(input[pos2++]);
         }
     }
     while (pos1 <= mid) {
-        tmp.push_back(input[pos1]);
-        pos1++;
+        tmp.push_back(input[pos1++]);
     }
     while (pos2 <= right) {
-        tmp.push_back(input[pos2]);
-        pos2++;
+        tmp.push_back(input[pos2++]);
     }
-    for(auto t : tmp) {
-        input[left] = t;
-        left++;
-    }
+    std::copy(tmp.begin(), tmp.end(), input.begin() + left);
 }
-
 
 template<typename T>
 void MergeSort(std::vector<T>& input, size_t left, size_t right) {
