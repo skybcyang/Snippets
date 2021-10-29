@@ -30,6 +30,6 @@ TEST_CASE("test monkey sort") {
 TEST_CASE("test_sleep_sort") {
     std::vector<int> arr {2, 1, 9, 3, 4, 5, 7};
     SleepSort(arr);
-    copy(res.begin(), res.end(), std::ostream_iterator<int>(std::cout, " "));
+    copy(arr.begin(), arr.end(), std::ostream_iterator<int>(std::cout, " "));
 }
 
