@@ -11,14 +11,12 @@
 #include <mutex>
 #include <catch2/catch_test_macros.hpp>
 
-template<typename T>
-void SleepThread(int input, std::vector<T>& res, std::mutex& m) {
+void SleepThread(int input, std::vector<int>& res, std::mutex& m) {
     std::this_thread::sleep_for(std::chrono::seconds(input));
     std::lock_guard<std::mutex> lock(m);
     res.push_back(input);
 }
 
-// only when T is Integer
 template<typename T>
 void SleepSort(std::vector<T>& arr) {
     std::mutex m;
