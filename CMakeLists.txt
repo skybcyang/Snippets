@@ -30,6 +30,10 @@ add_executable(Snippets
         sort/merge_sort/MergeSort.h
         sort/selection_sort/SelectionSort.h
         mthread/thread_guard/thread_guard.h
-        mthread/thread_guard/test_thread_guard.cpp mthread/thread_task/thread_task.h mthread/thread_task/test_thread_task.cpp)
+        mthread/thread_guard/test_thread_guard.cpp
+        mthread/thread_task/thread_task.h
+        mthread/thread_task/test_thread_task.cpp
+        others/x_macro_patterns/x_macro_patterns_demo.h
+        others/x_macro_patterns/test_x_macro_patterns_demo.cpp)
 
 target_link_libraries(Snippets PRIVATE Catch2::Catch2WithMain)
