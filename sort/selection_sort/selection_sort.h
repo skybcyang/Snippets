@@ -2,8 +2,8 @@
 // Created by skybcyang on 2021/10/29.
 //
 
-#ifndef SNIPPETS_SELECTIONSORT_H
-#define SNIPPETS_SELECTIONSORT_H
+#ifndef SNIPPETS_SELECTION_SORT_H
+#define SNIPPETS_SELECTION_SORT_H
 
 template<typename T>
 void SelectionSort(std::vector<T>& arr) {
@@ -23,4 +23,4 @@ void SelectionSort(std::vector<T>& arr) {
     }
 }
 
-#endif //SNIPPETS_SELECTIONSORT_H
+#endif //SNIPPETS_SELECTION_SORT_H

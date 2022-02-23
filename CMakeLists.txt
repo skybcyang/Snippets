@@ -17,10 +17,10 @@ FetchContent_MakeAvailable(Catch2)
 add_subdirectory(tempo)
 
 add_executable(Snippets
-        sort/bubble_sort/BubbleSort.h
+        sort/bubble_sort/bubble_sort.h
         sort/test_sort.cpp
-        sort/strange_sort/MonkeySort.h
-        sort/strange_sort/SleepSort.h
+        sort/strange_sort/monkey_sort.h
+        sort/strange_sort/sleep_sort.h
         find_way/bfs/bfs.h
         find_way/dfs/test_dfs.cpp
         find_way/dfs/dfs.h
@@ -30,8 +30,8 @@ add_executable(Snippets
         others/para_binding/test_para_binding.cpp
         find_way/astar/astar.h
         find_way/astar/test_astar.cpp
-        sort/merge_sort/MergeSort.h
-        sort/selection_sort/SelectionSort.h
+        sort/merge_sort/merge_sort.h
+        sort/selection_sort/selection_sort.h
         mthread/thread_guard/thread_guard.h
         mthread/thread_guard/test_thread_guard.cpp
         mthread/thread_task/thread_task.h

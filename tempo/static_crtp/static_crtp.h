@@ -1,5 +1,6 @@
 //
 // Created by skybcyang on 2021/8/15.
+// reference : https://github.com/Bareflank/static_interface_pattern
 //
 
 #ifndef TEMPO_STATIC_CRTP_H

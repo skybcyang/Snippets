@@ -2,8 +2,8 @@
 // Created by skybcyang on 2021/8/30.
 //
 
-#ifndef SNIPPETS_BUBBLESORT_H
-#define SNIPPETS_BUBBLESORT_H
+#ifndef SNIPPETS_BUBBLE_SORT_H
+#define SNIPPETS_BUBBLE_SORT_H
 
 #include <vector>
 #include <iterator>
@@ -21,4 +21,4 @@ void BubbleSort(std::vector<T>& input) {
     }
 }
 
-#endif //SNIPPETS_BUBBLESORT_H
+#endif //SNIPPETS_BUBBLE_SORT_H

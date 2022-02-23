@@ -2,8 +2,8 @@
 // Created by skybcyang on 2021/8/30.
 //
 
-#ifndef SNIPPETS_SLEEPSORT_H
-#define SNIPPETS_SLEEPSORT_H
+#ifndef SNIPPETS_SLEEP_SORT_H
+#define SNIPPETS_SLEEP_SORT_H
 
 #include <iostream>
 #include <vector>

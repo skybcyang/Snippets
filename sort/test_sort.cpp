@@ -3,11 +3,11 @@
 //
 
 #include <iostream>
-#include "bubble_sort/BubbleSort.h"
-#include "merge_sort/MergeSort.h"
-#include "selection_sort/SelectionSort.h"
-#include "strange_sort/MonkeySort.h"
-#include "strange_sort/SleepSort.h"
+#include "bubble_sort/bubble_sort.h"
+#include "merge_sort/merge_sort.h"
+#include "selection_sort/selection_sort.h"
+#include "strange_sort/monkey_sort.h"
+#include "strange_sort/sleep_sort.h"
 #include <catch2/catch_test_macros.hpp>
 
 TEST_CASE("test_bubble_sort") {

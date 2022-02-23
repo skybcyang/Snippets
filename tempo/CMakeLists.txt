@@ -43,9 +43,9 @@ add_executable(Tempo
         empty_class_checker/empty_class_checker.h
         empty_class_checker/test_empty_class_checker.cpp
         empty_class_checker/how_to_detect_if_a_class_has_member_variables.h
-        data_table/test_data_table.cpp
-        data_table/new_dt.h
-        data_table/old_dt.h
-        data_table/common.h)
+        dt/test_data_table.cpp
+        dt/new_dt.h
+        dt/old_dt.h
+        dt/common.h)
 
 target_link_libraries(Tempo PRIVATE Catch2::Catch2WithMain nanobench)

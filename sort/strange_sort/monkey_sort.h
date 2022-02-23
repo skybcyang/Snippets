@@ -2,8 +2,8 @@
 // Created by skybcyang on 2021/8/30.
 //
 
-#ifndef SNIPPETS_MONKEYSORT_H
-#define SNIPPETS_MONKEYSORT_H
+#ifndef SNIPPETS_MONKEY_SORT_H
+#define SNIPPETS_MONKEY_SORT_H
 
 #include <iostream>
 #include <vector>
