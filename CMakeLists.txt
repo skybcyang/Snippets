@@ -13,6 +13,9 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
+
+add_subdirectory(tempo)
+
 add_executable(Snippets
         sort/bubble_sort/BubbleSort.h
         sort/test_sort.cpp
