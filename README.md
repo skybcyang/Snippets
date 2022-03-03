@@ -20,7 +20,7 @@
 - mthread
   - thread_guard
   - thread_task
-- tempo [some models implemented by Template]
+- tempo [Solution using template tech for some funny questions]
   - [calc_array_size](./tempo/calc_array_size) 计算得到数组长度
   - [crtp](./tempo/crtp/) crtp的经典实现
   - [dt](./tempo/dt) 数据表的不同实现

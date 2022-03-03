@@ -3,8 +3,8 @@
 // 参考C++沉思录实现UserCount
 //
 
-#ifndef TEMPO_MY_SHARED_PTR_H
-#define TEMPO_MY_SHARED_PTR_H
+#ifndef TEMPO_NON_INTRUSIVE_SHARED_PTR_H
+#define TEMPO_NON_INTRUSIVE_SHARED_PTR_H
 
 #include <iostream>
 #include <atomic>
@@ -45,22 +45,22 @@ private:
 };
 
 template <typename T>
-struct MySharedPtr {
+struct MyNonIntrusivePtr {
 public:
-    MySharedPtr() : t(new T) {}
-    MySharedPtr(std::nullptr_t rhs) : t(rhs) {}
+    MyNonIntrusivePtr() : t(new T) {}
+    MyNonIntrusivePtr(std::nullptr_t rhs) : t(rhs) {}
     template<typename ...Ts>
-    MySharedPtr(Ts... args) : t(new T(args...)) {}
-    MySharedPtr(const MySharedPtr& rhs) : t(rhs.t), uc(rhs.uc) {}
-    MySharedPtr(const T& tt) : t(new T(std::move(tt))) {}
-    MySharedPtr& operator=(const MySharedPtr& rhs) {
+    MyNonIntrusivePtr(Ts... args) : t(new T(args...)) {}
+    MyNonIntrusivePtr(const MyNonIntrusivePtr& rhs) : t(rhs.t), uc(rhs.uc) {}
+    MyNonIntrusivePtr(const T& tt) : t(new T(std::move(tt))) {}
+    MyNonIntrusivePtr& operator=(const MyNonIntrusivePtr& rhs) {
         if (uc.reattach(rhs.uc)) {
             delete t;
         }
         t = rhs.t;
         return *this;
     }
-    ~MySharedPtr() {
+    ~MyNonIntrusivePtr() {
         if (uc.Only()) {
             delete t;
         }
@@ -74,8 +74,8 @@ private:
 
 
 template <typename T, typename ...Ts>
-MySharedPtr<T> MakeShared(Ts... args) {
-    return MySharedPtr<T>(args...);
+MyNonIntrusivePtr<T> MakeShared(Ts... args) {
+    return MyNonIntrusivePtr<T>(args...);
 }
 
-#endif //TEMPO_MY_SHARED_PTR_H
+#endif //TEMPO_NO_INTRUSIVE_SHARED_PTR_H

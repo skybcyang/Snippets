@@ -22,8 +22,8 @@ FetchContent_MakeAvailable(nanobench)
 
 add_executable(Tempo
         others/multi_stream_input_and_sync.cpp
-        my_smart_ptr/my_shared_ptr.h
-        my_smart_ptr/test_my_shared_ptr.cpp
+        my_smart_ptr/non_intrusive_shared_ptr.h
+        my_smart_ptr/test_non_intrusive_shared_ptr.cpp
         tuple_for_each/tuple_for_each.h
         tuple_for_each/test_tuple_for_each.cpp
         static_reflection/static_reflection.cpp
@@ -46,6 +46,6 @@ add_executable(Tempo
         dt/test_data_table.cpp
         dt/new_dt.h
         dt/old_dt.h
-        dt/common.h)
+        dt/common.h my_smart_ptr/intrusive_shared_ptr.h my_smart_ptr/test_intrusive_shared_ptr.cpp)
 
 target_link_libraries(Tempo PRIVATE Catch2::Catch2WithMain nanobench)
