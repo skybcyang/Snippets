@@ -33,20 +33,66 @@ private:
 template<typename T>
 struct intrusive_ptr {
 public:
-    intrusive_ptr(T* t) : t(t) {
+     intrusive_ptr(T* t) : t(t) {
         if (t != nullptr) {
             intrusive_ptr_add_ref(t);
         }
+    }
+
+    intrusive_ptr(const intrusive_ptr& other) {
+        t = other.t;
+        if (t != nullptr) {
+            intrusive_ptr_add_ref(t);
+        }
+    }
+
+    intrusive_ptr& operator=(T* other) {
+        if (t == other) {
+            return *this;
+        }
+        if (t != nullptr) {
+            intrusive_ptr_release(t);
+        }
+        t = other;
+        if (t != nullptr) {
+            intrusive_ptr_add_ref(t);
+        }
+        return *this;
+    }
+
+    intrusive_ptr& operator=(const intrusive_ptr& other) {
+        if (this == &other) {
+            return *this;
+        }
+        if (t != nullptr) {
+            intrusive_ptr_release(t);
+        }
+        t = other.t;
+        if (t != nullptr) {
+            intrusive_ptr_add_ref(t);
+        }
+        return *this;
     }
 
     ~intrusive_ptr() {
         if (t != nullptr) {
             intrusive_ptr_release(t);
         }
+        t = nullptr;
     }
 
     T* Get() {
+         if (t == nullptr) {
+             return nullptr;
+         }
         return t;
+    }
+
+    void Reset() {
+        if (t != nullptr) {
+            intrusive_ptr_release(t);
+            t = nullptr;
+        }
     }
 
     size_t GetUserCount() {
