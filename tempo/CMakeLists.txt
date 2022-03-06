@@ -46,6 +46,6 @@ add_executable(Tempo
         dt/test_data_table.cpp
         dt/new_dt.h
         dt/old_dt.h
-        dt/common.h my_smart_ptr/intrusive_shared_ptr.h my_smart_ptr/test_intrusive_shared_ptr.cpp)
+        dt/common.h my_smart_ptr/intrusive_shared_ptr.h my_smart_ptr/test_intrusive_shared_ptr.cpp dynamic_bitset/dynamic_bitset.h dynamic_bitset/test_dynamic_bitset.cpp)
 
 target_link_libraries(Tempo PRIVATE Catch2::Catch2WithMain nanobench)

@@ -13,6 +13,13 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
+FetchContent_Declare(
+        nanobench
+        GIT_REPOSITORY https://gitclone.com/github.com/martinus/nanobench
+        GIT_TAG        v4.1.0
+)
+
+FetchContent_MakeAvailable(nanobench)
 
 add_subdirectory(tempo)
 
@@ -39,4 +46,4 @@ add_executable(Snippets
         others/x_macro_patterns/x_macro_patterns_demo.h
         others/x_macro_patterns/test_x_macro_patterns_demo.cpp)
 
-target_link_libraries(Snippets PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(Snippets PRIVATE Catch2::Catch2WithMain nanobench)
