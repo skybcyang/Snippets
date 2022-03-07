@@ -88,7 +88,8 @@ struct DynamicBitset {
             return size;
         }
         for (size_t index = 0; index < ((size+63) >> 6); index++) {
-            size_t offset = __builtin_ffsll(bits[index]); // __builtin_ffsll GCC的，建议自己实现，算法原理和二分差不多
+            size_t offset = __builtin_ffsll(bits[index]);
+            // __builtin_ffs GCC的，建议自己实现，算法原理和二分差不多
             // 但是标准库是针对平台优化的，有些可能就一条指令，要是自己实现的话可能会很慢
             if (offset != 0) {
                 return (index << 6) + offset -1;
