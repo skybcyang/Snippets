@@ -101,10 +101,10 @@ struct DynamicBitset {
         if (bits == nullptr || pos >= size) {
             return size;
         }
-        for (size_t index = (pos >> 6); index < ((size+63) >> 6); index++) {
+        for (size_t index = ((pos + 1) >> 6); index < ((size + 63) >> 6); index++) {
             size_t offset = 0;
-            if (index == (pos >> 6)) {
-                uint64_t newBit = (bits[index] >> ((pos+1)%64)) << ((pos+1)%64);
+            if (index == ((pos + 1) >> 6)) {
+                uint64_t newBit = (bits[index] >> ((pos + 1) % 64)) << ((pos + 1) % 64);
                 offset = __builtin_ffsll(newBit);
             }
             else {

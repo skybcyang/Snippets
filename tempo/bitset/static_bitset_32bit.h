@@ -80,9 +80,9 @@ public:
         if (pos >= real_len) {
             return real_len;
         }
-        for (size_t index = (pos >> 5); index < bit_len; index++) {
+        for (size_t index = ((pos + 1) >> 5); index < bit_len; index++) {
             size_t offset = 0;
-            if (index == (pos >> 5)) {
+            if (index == ((pos + 1) >> 5)) {
                 uint32_t newBit = (bits[index] >> ((pos+1)%32)) << ((pos+1)%32);
                 offset = __builtin_ffs(newBit);
             }
