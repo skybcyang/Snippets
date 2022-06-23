@@ -54,6 +54,8 @@ add_executable(Tempo
         bitset/static_bitset.h
         bitset/bitmap.h
         scope_guard/ScopeGuard.h
-        scope_guard/test_scope_guard.cpp)
+        scope_guard/test_scope_guard.cpp
+        map_macro_to_struct/map_macro_to_struct.h
+        map_macro_to_struct/test_map_macro_to_struct.cpp)
 
 target_link_libraries(Tempo PRIVATE Catch2::Catch2WithMain nanobench)
