@@ -105,4 +105,4 @@ private:
     T* t;
 };
 
-#endif //TEMPO_MY_INTRUSIVE_PTR_H
+#endif //TEMPO_INTRUSIVE_SHARED_PTR_H

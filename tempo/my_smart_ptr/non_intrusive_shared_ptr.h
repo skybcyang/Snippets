@@ -78,4 +78,4 @@ MyNonIntrusivePtr<T> MakeShared(Ts... args) {
     return MyNonIntrusivePtr<T>(args...);
 }
 
-#endif //TEMPO_NO_INTRUSIVE_SHARED_PTR_H
+#endif //TEMPO_NON_INTRUSIVE_SHARED_PTR_H

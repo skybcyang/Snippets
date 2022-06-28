@@ -44,6 +44,6 @@ add_executable(Snippets
         mthread/thread_task/thread_task.h
         mthread/thread_task/test_thread_task.cpp
         others/x_macro_patterns/x_macro_patterns_demo.h
-        others/x_macro_patterns/test_x_macro_patterns_demo.cpp)
+        others/x_macro_patterns/test_x_macro_patterns_demo.cpp others/det_mutex_conflict/det_mutex_conflict.h others/det_mutex_conflict/det_shared_mutex_conflict.h others/det_mutex_conflict/test_det_mutex_conflict.cpp others/det_mutex_conflict/test_det_shared_mutex_conflict.cpp)
 
 target_link_libraries(Snippets PRIVATE Catch2::Catch2WithMain nanobench)
