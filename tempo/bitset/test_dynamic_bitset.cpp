@@ -30,13 +30,14 @@ TEST_CASE("test static bitset function") {
     db.Reset(10);
     REQUIRE(!db[10]);
 
+    for (size_t index = db.FindFirst(); index < db.Size(); index = db.FindNext(index)) {
+        std::cout << index << std::endl;
+    }
+
     REQUIRE(!db.Empty());
     db.Reset();
     REQUIRE(db.Empty());
 
-    for (size_t index = db.FindFirst(); index < db.Size(); index = db.FindNext(index)) {
-        std::cout << index << std::endl;
-    }
 }
 
 TEST_CASE("test dynamic bitset function") {

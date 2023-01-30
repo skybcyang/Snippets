@@ -56,6 +56,7 @@ add_executable(Tempo
         scope_guard/ScopeGuard.h
         scope_guard/test_scope_guard.cpp
         map_macro_to_struct/map_macro_to_struct.h
-        map_macro_to_struct/test_map_macro_to_struct.cpp)
+        map_macro_to_struct/test_map_macro_to_struct.cpp
+        data_container/include/meta_info.h class_unity/class_unity.h class_unity/test_class_unity.cpp)
 
 target_link_libraries(Tempo PRIVATE Catch2::Catch2WithMain nanobench)
