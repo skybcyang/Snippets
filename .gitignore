@@ -1,0 +1,64 @@
+# C++ 编译生成的文件
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+*.out
+*.app
+
+# CMake 构建目录
+build/
+cmake-build-*/
+out/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# IDE - CLion
+.idea/
+*.iml
+*.iws
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# IDE - Visual Studio
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+.vs/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# 编译数据库
+compile_commands.json
+.clangd/
+.cache/
+
+# 日志和临时文件
+*.log
+*.tmp
+*.temp
+*~
+
+# 测试和覆盖率
+*.gcov
+*.gcno
+*.gcda

@@ -21,29 +21,49 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(nanobench)
 
-add_subdirectory(tempo)
+add_subdirectory(metaprogramming)
 
 add_executable(Snippets
-        sort/bubble_sort/bubble_sort.h
-        sort/test_sort.cpp
-        sort/strange_sort/monkey_sort.h
-        sort/strange_sort/sleep_sort.h
-        find_way/bfs/bfs.h
-        find_way/dfs/test_dfs.cpp
-        find_way/dfs/dfs.h
-        find_way/base.h
-        find_way/bfs/test_bfs.cpp
-        others/timer/timer.cpp
-        others/para_binding/test_para_binding.cpp
-        find_way/astar/astar.h
-        find_way/astar/test_astar.cpp
-        sort/merge_sort/merge_sort.h
-        sort/selection_sort/selection_sort.h
-        mthread/thread_guard/thread_guard.h
-        mthread/thread_guard/test_thread_guard.cpp
-        mthread/thread_task/thread_task.h
-        mthread/thread_task/test_thread_task.cpp
-        others/x_macro_patterns/x_macro_patterns_demo.h
-        others/x_macro_patterns/test_x_macro_patterns_demo.cpp others/det_mutex_conflict/det_mutex_conflict.h others/det_mutex_conflict/det_shared_mutex_conflict.h others/det_mutex_conflict/test_det_mutex_conflict.cpp others/det_mutex_conflict/test_det_shared_mutex_conflict.cpp mthread/msg_queue/msg_queue.h mthread/mutex_with_count/mutex_with_count.h mthread/mutex_with_count/mutex_with_count.cpp mthread/mutex_with_count/test_mutex_with_count.cpp)
+        algorithm/sort/bubble_sort/bubble_sort.h
+        algorithm/sort/test_sort.cpp
+        algorithm/sort/strange_sort/monkey_sort.h
+        algorithm/sort/strange_sort/sleep_sort.h
+        algorithm/sort/merge_sort/merge_sort.h
+        algorithm/sort/selection_sort/selection_sort.h
+        algorithm/graph/base.h
+        algorithm/graph/bfs/bfs.h
+        algorithm/graph/bfs/test_bfs.cpp
+        algorithm/graph/dfs/dfs.h
+        algorithm/graph/dfs/test_dfs.cpp
+        algorithm/graph/astar/astar.h
+        algorithm/graph/astar/test_astar.cpp
+        concurrency/thread/thread_guard/thread_guard.h
+        concurrency/thread/thread_guard/test_thread_guard.cpp
+        concurrency/thread/thread_task/thread_task.h
+        concurrency/thread/thread_task/test_thread_task.cpp
+        concurrency/sync/mutex_with_count/mutex_with_count.h
+        concurrency/sync/mutex_with_count/mutex_with_count.cpp
+        concurrency/sync/mutex_with_count/test_mutex_with_count.cpp
+        concurrency/sync/det_mutex_conflict/det_mutex_conflict.h
+        concurrency/sync/det_mutex_conflict/det_shared_mutex_conflict.h
+        concurrency/sync/det_mutex_conflict/test_det_mutex_conflict.cpp
+        concurrency/sync/det_mutex_conflict/test_det_shared_mutex_conflict.cpp
+        concurrency/queue/msg_queue/msg_queue.h
+        concurrency/queue/lockfree_queue/lockfree_queue.h
+        concurrency/queue/lockfree_queue/test_lockfree_queue.cpp
+        concurrency/pool/thread_pool/thread_pool.h
+        concurrency/pool/thread_pool/test_thread_pool.cpp
+        container/cache/lru_cache/lru_cache.h
+        container/cache/lru_cache/test_lru_cache.cpp
+        pattern/creational/singleton/singleton.h
+        pattern/creational/singleton/test_singleton.cpp
+        pattern/behavioral/observer/observer.h
+        pattern/behavioral/observer/test_observer.cpp
+        utility/timer/timer.cpp
+        utility/para_binding/test_para_binding.cpp
+        utility/macro/x_macro_patterns/x_macro_patterns_demo.h
+        utility/macro/x_macro_patterns/test_x_macro_patterns_demo.cpp
+        utility/string/string_split/string_split.h
+        utility/string/string_split/test_string_split.cpp)
 
 target_link_libraries(Snippets PRIVATE Catch2::Catch2WithMain nanobench)
